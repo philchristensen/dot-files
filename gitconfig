@@ -1,0 +1,18 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[user]
+	name = Phil Christensen
+	email = phil@bubblehouse.org
+
+[core]
+	excludesfile = /home/phil/.gitignore
+    pager = less -FRSX -x4
+
