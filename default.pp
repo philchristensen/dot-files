@@ -1,30 +1,41 @@
-file { "/home/${id}/.bash_aliases":
-	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/bash_aliases.sh",
+case $operatingsystem {
+	Darwin: {
+		$home = "/Users"
+		$current_user = 'phil'
+	}
+	default: {
+		$home = "$home"
+		$current_user = $::id
+	}
 }
 
-file { "/home/${id}/.bash_profile":
+file { "$home/$current_user/.bash_aliases":
 	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/bash_profile.sh",
+	target => "$home/$current_user/Workspace/dot-files/bash_aliases.sh",
 }
 
-file { "/home/${id}/.bashrc":
+file { "$home/$current_user/.bash_profile":
 	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/bashrc.sh",
+	target => "$home/$current_user/Workspace/dot-files/bash_profile.sh",
 }
 
-file { "/home/${id}/.gitconfig":
+file { "$home/$current_user/.bashrc":
 	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/gitconfig",
+	target => "$home/$current_user/Workspace/dot-files/bashrc.sh",
 }
 
-file { "/home/${id}/.gitignore":
+file { "$home/$current_user/.gitconfig":
 	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/gitignore",
+	target => "$home/$current_user/Workspace/dot-files/gitconfig",
 }
 
-file { "/home/${id}/.profile":
+file { "$home/$current_user/.gitignore":
 	ensure => link,
-	target => "/home/${id}/Workspace/dot-files/profile.sh",
+	target => "$home/$current_user/Workspace/dot-files/gitignore",
+}
+
+file { "$home/$current_user/.profile":
+	ensure => link,
+	target => "$home/$current_user/Workspace/dot-files/profile.sh",
 }
 
