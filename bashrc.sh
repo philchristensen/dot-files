@@ -39,8 +39,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source /home/phil/Workspace/bash-functions/decorate-prompt.sh
-source /home/phil/Workspace/bash-functions/activate-virtualenv.sh
+source $HOME/Workspace/bash-functions/decorate-prompt.sh
+source $HOME/Workspace/bash-functions/activate-virtualenv.sh
 
 function pcommand {
 	echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"
