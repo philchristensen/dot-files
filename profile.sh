@@ -8,9 +8,9 @@
 
 export JDK_HOME=/usr/lib/jvm/java-6-sun
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export CLASSPATH=/home/phil/Workspace/clojure/clojure.jar
-export CLASSPATH=$CLASSPATH:/home/phil/Workspace/clojure-contrib/clojure-contrib.jar
+export CLASSPATH=$HOME/Workspace/clojure/clojure.jar
+export CLASSPATH=$CLASSPATH:$HOME/Workspace/clojure-contrib/clojure-contrib.jar
 
-export PATH=/home/phil/local/bin:$PATH
+export PATH=$HOME/local/bin:$PATH
 export PATH=$PATH:/usr/local/sublime2
 export PATH=$PATH:/var/lib/gems/1.8/bin
