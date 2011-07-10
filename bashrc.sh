@@ -43,7 +43,7 @@ source $HOME/Workspace/bash-functions/decorate-prompt.sh
 source $HOME/Workspace/bash-functions/activate-virtualenv.sh
 
 function pcommand {
-	echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"
+	echo -ne "\033]0;${USER}@${HOSTNAME/.bubblehouse.org/}: ${PWD}\007"
 	activate_virtualenv
 	decorate_prompt
 }

@@ -12,5 +12,6 @@ export CLASSPATH=$HOME/Workspace/clojure/clojure.jar
 export CLASSPATH=$CLASSPATH:$HOME/Workspace/clojure-contrib/clojure-contrib.jar
 
 export PATH=$HOME/local/bin:$PATH
-export PATH=$PATH:/usr/local/sublime2
-export PATH=$PATH:/var/lib/gems/1.8/bin
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+export MANPATH=/opt/local/share/man:$MANPATH
