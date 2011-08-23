@@ -19,3 +19,5 @@ alias ls-='ls -la'
 alias ll='ls -la'
 
 alias svn='/usr/local/bin/svn-color.py'
+alias stinkbox='roxterm --color-scheme="Default" --tab -e ssh stinkbox.local'
+alias newtab='roxterm --color-scheme="Default Local" --tab'

@@ -1,7 +1,7 @@
 case $operatingsystem {
 	Darwin: {
 		$home = "/Users"
-		$current_user = 'phil'
+		$current_user = 'pchristensen'
 	}
 	default: {
 		$home = "$home"

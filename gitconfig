@@ -10,7 +10,7 @@
 	br = branch
 [user]
 	name = Phil Christensen
-	email = phil@bubblehouse.org
+	email = pchristensen@freelancersunion.org
 
 [core]
 	excludesfile = /home/phil/.gitignore

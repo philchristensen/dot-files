@@ -6,11 +6,7 @@
 
 # NOTE: Only add PATH and other non-interactive var settings here
 
-export JDK_HOME=/usr/lib/jvm/java-6-sun
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export CLASSPATH=$HOME/Workspace/clojure/clojure.jar
-export CLASSPATH=$CLASSPATH:$HOME/Workspace/clojure-contrib/clojure-contrib.jar
-
-export PATH=$HOME/local/bin:$PATH
-export PATH=$PATH:/usr/local/sublime2
-export PATH=$PATH:/var/lib/gems/1.8/bin
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/lib/postgresql90/bin:$PATH
+export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export MANPATH=$PATH:/opt/local/share/man

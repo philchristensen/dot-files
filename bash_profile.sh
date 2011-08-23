@@ -1,12 +1,9 @@
 #!/bin/bash
 
 export EDITOR=nano
-
-export CLOJURE_JAVA=/usr/lib/jvm/java-6-sun/bin/java
-
-export WORKON_HOME=/home/phil/Workspace/.virtual
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.6
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python2.7
+export WORKON_HOME=/Users/pchristensen/Workspace/.virtual
+source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
 # include .bashrc if it exists
 if [ -f "$HOME/.profile" ]; then

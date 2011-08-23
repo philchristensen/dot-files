@@ -44,7 +44,34 @@ source $HOME/Workspace/bash-functions/activate-virtualenv.sh
 
 function pcommand {
 	echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"
+	if [ "$TERM" == "screen" ]; then
+		name=`basename ${PWD}`
+		echo -ne "\ek${name}\e\\"
+	fi
 	activate_virtualenv
 	decorate_prompt
 }
 export PROMPT_COMMAND=pcommand
+
+if [ "$TERM" == "screen" ]; then
+	function ssh(){
+		echo -ne "\ek>>$1\e\\"
+		#rox default
+		/usr/bin/ssh $@
+		retval=$?
+		#rox local
+		return $retval
+	}
+fi
+
+function rox(){
+	session=/net/sf/roxterm/Options
+	msg="net.sf.roxterm.Options.SetColourScheme"
+	if [ "$1" == 'local' ]; then
+		dbus-send --session $session $msg string:$ROXTERM_ID string:"Default Local"
+	elif [ "$1" == 'prod' ]; then
+		dbus-send --session $session $msg string:$ROXTERM_ID string:"Default Production"
+	else
+		dbus-send --session $session $msg string:$ROXTERM_ID string:"Default"
+	fi
+}
